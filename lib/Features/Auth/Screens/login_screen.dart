@@ -3,10 +3,10 @@ import 'package:promilo_task/Constants/global_variable.dart';
 import 'package:promilo_task/Features/Auth/Services/auth_service.dart';
 import 'package:promilo_task/Features/Auth/Utilties/utilities.dart';
 import 'package:promilo_task/Features/Auth/Widgets/custom_checkbox.dart';
-import 'package:promilo_task/Features/Auth/Widgets/custom_divider.dart';
 import 'package:promilo_task/Features/Auth/Widgets/divider_with_text_widget.dart';
 import 'package:promilo_task/Features/Auth/Widgets/loader.dart';
 import 'package:promilo_task/Features/Auth/Widgets/login_button.dart';
+import 'package:promilo_task/Features/Auth/Widgets/privancy_bar.dart';
 import 'package:promilo_task/Features/Auth/Widgets/sign_up_widget.dart';
 import 'package:promilo_task/Features/Auth/Widgets/social_icons.dart';
 import 'package:promilo_task/Features/Bottom%20Nav/Screens/bottom_nav_screen.dart';
@@ -151,36 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height20,
                         const SignUpWidget(),
                         height20,
-                        const Center(
-                          child: Text(
-                            "By continuing,you agree to",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ),
-                        const SizedBox(height: 5),
-                        Center(
-                          child: RichText(
-                            text: const TextSpan(
-                              children: [
-                                TextSpan(
-                                    text: "Promilo's",
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                    )),
-                                TextSpan(
-                                  text: '  Terms of Use & Privacy Policy',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        height20,
-                        const CustomDivider(),
-                        const SizedBox(height: 5),
+                        const TermsAndPrivacy(),
                       ],
                     ),
                   ),
