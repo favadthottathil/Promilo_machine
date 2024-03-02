@@ -21,17 +21,6 @@ class _MeetUpScreenState extends State<MeetUpScreen> {
   int currentPage = 0;
 
   @override
-  void initState() {
-    super.initState();
-
-    pageController.addListener(() {
-      setState(() {
-        currentPage = pageController.page!.round();
-      });
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

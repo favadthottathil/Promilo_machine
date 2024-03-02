@@ -10,6 +10,7 @@ class TrendingPopularPeopleCard extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.25,
       child: ListView.builder(
+        padding: const EdgeInsets.only(right: 5),
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemCount: 3,
