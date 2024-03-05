@@ -16,22 +16,22 @@ import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = 'login-screen';
-
+  
   const LoginScreen({super.key});
-
+  
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
-
+  
   final passController = TextEditingController();
-
+  
   final formKey = GlobalKey<FormState>();
-
+  
   bool allFieldFilled = false;
-
+  
   @override
   void initState() {
     super.initState();
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AuthService>(builder: (context, provider, child) {
+    return Consumer<AuthService>(builder: (context, provider, _) {
       return provider.isLoading == true
           ? const Loader()
           : Scaffold(
